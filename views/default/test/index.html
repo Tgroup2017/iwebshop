@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--  {js:validate} -->
+ {js:form}
+</head>
+<body class="index">
+<!-- 
+<a href="{url:/site/index/id/1/sun/us/jsj/s}">首页</a>
+<a href="{url:http://www.baidu.com}">首页</a>
+<img src="{webroot:image/logo.png}"/>
+
+<form callback='test("回调一下")'>
+	<input name='email' pattern='email'   alt='请输入正确的email'>
+	<input name='email' pattern='^\d{3,5}' alt='请输入一个3-5 位的数字'>
+	<input type='submit'/>
+
+</form> -->
+<form name="test">
+	<input name='email' ></br>
+<input type="radio" name="sex" value='1'>男<input type="radio" name="sex"
+value='0'>女</br>
+<input type="checkbox" name="live" value='a'>看书<input type="checkbox"
+name="live" value='b'>打球</br>
+<select name="code">
+<option value="c++">c++</option>
+<option value="java">java</option>
+<option value="php">php</option>
+</select>
+<input type='submit'/>
+{set:$name='sun'}
+{$name}
+{set:$score=80}
+{if:$score>90} 优秀
+{elseif:$score>70}良好
+{else:}一般
+{/if}
+{set:$num=10}
+{while:$num-->0}
+{$num}
+{/while}
+
+{for:from=2 }
+{$i}<br/>
+{/for}
+{set:$numbers = array(1,2,3,4,5,6,7,8,9)}
+{foreach:items=$numbers key=$k item=$v}
+key:{$k}---value:{$v}<br/>
+{/foreach}
+{set:$page=IReq::get('page')==null?1:IReq::get('page');}
+{query:name=goods  page=$page pagesize=5}
+{$item['name']}<br/>
+{/query}
+{$query->getPageBar()}
+{query:name=user as u join=left join member as m on m.user_id eq u.id}
+{$item['user_id']}{$item['username']}
+{/query}
+</form>
+</body>
+<script type="text/javascript">
+var form = new Form('test');
+form.init({'email':'173058129@qq.com','sex':'0','live':'a','code':'php'});
+function test(txt){
+	alert(txt);
+	return false;
+}
+</script>
+</html>

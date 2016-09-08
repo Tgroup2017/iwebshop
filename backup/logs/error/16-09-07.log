@@ -1,0 +1,64 @@
+<ERROR_BLOCK>
+errorInfo: readfile(): Filename cannot be empty
+errorFile: IWEB_PATH/controllers/pic.php
+errorLine: 167
+errorCode: 2
+errorTime: 2016-09-07 14:49:20
+#0 IWEB_PATH/controllers/pic.php(167): readfile()
+#1 : Pic->thumb()
+#2 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#3 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#4 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(thumb)
+#5 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#6 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: SELECT * FROM iwebshop_member as m,iwebshop_user as u WHERE m.user_id = u.id and m.user_id= limit 1
+ -- You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'limit 1' at line 1
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 119
+excepCode: 1000
+excepTime: 2016-09-07 16:25:50
+#0 IWEB_PATH/lib/web/model/model_class.php(200): IDB->query(SELECT * FROM iwebshop_member as m,iwebshop_user as u WHERE m.user_id = u.id and m.user_id= limit 1)
+#1 IWEB_PATH/lib/web/model/model_class.php(148): IModel->query(m.user_id = u.id and m.user_id=,*,,1)
+#2 IWEB_PATH/classes/api/ucenter.php(61): IModel->getObj(m.user_id = u.id and m.user_id=)
+#3 : APIUcenter->getMemberInfo()
+#4 IWEB_PATH/classes/api.php(88): call_user_func_array()
+#5 IWEB_PATH/controllers/ucenter.php(18): Api::run(getMemberInfo)
+#6 : Ucenter->index()
+#7 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#8 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#9 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#10 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#11 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Array to string conversion
+errorFile: IWEB_PATH/controllers/site.php
+errorLine: 28
+errorCode: 8
+errorTime: 2016-09-07 17:01:22
+#0 : Site->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+errorInfo: Array to string conversion
+errorFile: IWEB_PATH/controllers/site.php
+errorLine: 30
+errorCode: 8
+errorTime: 2016-09-07 17:01:53
+#0 : Site->index()
+#1 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#2 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#3 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#4 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#5 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+

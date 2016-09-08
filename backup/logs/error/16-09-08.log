@@ -1,0 +1,55 @@
+<ERROR_BLOCK>
+excepInfo: can not find the memcache extension
+excepFile: IWEB_PATH/lib/core/cache/memcache_class.php
+excepLine: 26
+excepCode: 0
+excepTime: 2016-09-08 14:28:58
+#0 IWEB_PATH/lib/core/cache/cache_class.php(36): IMemCache->__construct()
+#1 IWEB_PATH/lib/db/db_class.php(229): ICache->__construct(memcache)
+#2 IWEB_PATH/lib/db/db_class.php(90): IDB->getCacheTarget(memcache)
+#3 IWEB_PATH/lib/core/query_class.php(161): IDB->query(select * from iwebshop_goods  where id=1    limit 5000)
+#4 IWEB_PATH/controllers/test.php(11): IQuery->find()
+#5 : test->index()
+#6 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#7 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#8 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#9 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#10 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: can not find the memcache extension
+excepFile: IWEB_PATH/lib/core/cache/memcache_class.php
+excepLine: 26
+excepCode: 0
+excepTime: 2016-09-08 14:29:41
+#0 IWEB_PATH/lib/core/cache/cache_class.php(36): IMemCache->__construct()
+#1 IWEB_PATH/lib/db/db_class.php(229): ICache->__construct(memcache)
+#2 IWEB_PATH/lib/db/db_class.php(90): IDB->getCacheTarget(memcache)
+#3 IWEB_PATH/lib/core/query_class.php(161): IDB->query(select * from iwebshop_goods  where id=1    limit 5000)
+#4 IWEB_PATH/controllers/test.php(12): IQuery->find()
+#5 : test->index()
+#6 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#7 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#8 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#9 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#10 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
+<ERROR_BLOCK>
+excepInfo: UPDATE iwebshop_goods SET  `price` = '1000'  WHERE id = 2
+ -- Unknown column 'price' in 'field list'
+excepFile: IWEB_PATH/lib/db/db_class.php
+excepLine: 152
+excepCode: 1000
+excepTime: 2016-09-08 14:37:08
+#0 IWEB_PATH/lib/web/model/model_class.php(101): IDB->query(UPDATE iwebshop_goods SET  `price` = '1000'  WHERE id = 2)
+#1 IWEB_PATH/controllers/test.php(22): IModel->update(id = 2)
+#2 : test->index()
+#3 IWEB_PATH/lib/web/action/inline_action.php(24): call_user_func()
+#4 IWEB_PATH/lib/web/controller/controller_class.php(115): IInlineAction->run()
+#5 IWEB_PATH/lib/core/webapplication_class.php(75): IController->run(index)
+#6 IWEB_PATH/lib/core/application_class.php(94): IWebApplication->execRequest()
+#7 IWEB_PATH/index.php(5): IApplication->run()
+</ERROR_BLOCK>
+
