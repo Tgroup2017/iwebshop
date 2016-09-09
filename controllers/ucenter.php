@@ -17,6 +17,7 @@ class Ucenter extends IController implements userAuthorization
     	//获取用户基本信息
 		$user = Api::run('getMemberInfo',$this->user['user_id']);
 
+
 		//获取用户各项统计数据
 		$statistics = Api::run('getMemberTongJi',$this->user['user_id']);
 

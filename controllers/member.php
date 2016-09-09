@@ -12,7 +12,6 @@ class Member extends IController implements adminAuthorization
 
 	function init()
 	{
-
 	}
 
 	/**
